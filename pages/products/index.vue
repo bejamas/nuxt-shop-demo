@@ -10,12 +10,11 @@ const { products }: ProductResponse = await $fetch(
   "https://dummyjson.com/products/"
 );
 
-const formatPrice = (value: number) => {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  }).format(value);
-};
+const { addToCart } = useCart();
+
+useSeoMeta({
+  title: "Products",
+});
 </script>
 <template>
   <header class="site-section">
@@ -32,33 +31,7 @@ const formatPrice = (value: number) => {
         :key="product.id"
         class="product-list__item"
       >
-        <article class="product-card">
-          <div class="product-card__content">
-            <h2 class="product-card__title">{{ product.title }}</h2>
-            <p class="product-card__description">{{ product.description }}</p>
-            <div class="product-card__price">
-              <span class="product-card__price--discounted">{{
-                formatPrice(
-                  product.price -
-                    product.price * (product.discountPercentage / 100)
-                )
-              }}</span>
-            </div>
-            <div class="product-card__actions">
-              <button class="product-card__actions--add-to-cart">
-                Add to cart
-              </button>
-              <NuxtLink :to="`/products/${product.id}`">
-                <button class="product-card__actions--view-details">
-                  View details
-                </button>
-              </NuxtLink>
-            </div>
-          </div>
-          <div class="product-card__image">
-            <img :src="product.thumbnail" :alt="product.title" />
-          </div>
-        </article>
+        <ProductCard :product="product" />
       </li>
     </ul>
   </section>

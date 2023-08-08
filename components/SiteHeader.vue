@@ -1,4 +1,7 @@
 <!-- ./components/SiteHeader.vue -->
+<script setup lang="ts">
+const { items } = useCart();
+</script>
 <template>
   <header class="site-header">
     <NuxtLink to="/">
@@ -14,6 +17,9 @@
         </li>
         <li class="site-nav__item">
           <NuxtLink to="/products">Products</NuxtLink>
+        </li>
+        <li class="site-nav__item">
+          <NuxtLink to="/cart">Cart - {{ items.length }}</NuxtLink>
         </li>
       </ul>
     </nav>

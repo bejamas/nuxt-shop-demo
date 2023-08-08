@@ -1,6 +1,6 @@
 // ./types/index.d.ts
 
-export { Product };
+export { Product, CartItem };
 
 declare global {
   interface Product {
@@ -15,5 +15,10 @@ declare global {
     category: string;
     thumbnail: string;
     images: string[];
+  }
+
+  interface CartItem {
+    product: Product;
+    quantity: number;
   }
 }
