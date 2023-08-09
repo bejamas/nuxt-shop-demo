@@ -24,8 +24,8 @@ useSeoMeta({
 </script>
 <template>
   <header class="product-header site-section">
-    <div class="text-content">
-      <h1>
+    <div class="product-header__content">
+      <h1 class="product-header__title">
         {{ product.title }}
       </h1>
       <p>
@@ -40,15 +40,15 @@ useSeoMeta({
             formatPrice(product.price * (1 + product.discountPercentage / 100))
           }}
         </span>
-        <div class="action-cont">
-          <button class="btn btn--primary">Add to cart</button>
-          <button class="btn btn--secondary">Buy now</button>
-        </div>
       </div>
-      <div class="product-header__media-cont">
-        <div class="img-cont">
-          <img :src="product.thumbnail" :alt="product.title" />
-        </div>
+      <div class="action-cont">
+        <button class="btn btn--alt">Add to cart</button>
+        <button class="btn">Buy now</button>
+      </div>
+    </div>
+    <div class="product-header__media-cont">
+      <div class="img-cont">
+        <img :src="product.thumbnail" :alt="product.title" />
       </div>
     </div>
   </header>

@@ -14,24 +14,17 @@ defineProps({
     <div class="product-card__content">
       <h2 class="product-card__title">{{ product.title }}</h2>
       <p class="product-card__description">{{ product.description }}</p>
-      <div class="product-card__price">
-        <span class="product-card__price--discounted">{{
-          formatPrice(
-            product.price - product.price * (product.discountPercentage / 100)
-          )
-        }}</span>
-      </div>
-      <div class="product-card__actions">
-        <button
-          @click="addToCart(product)"
-          class="product-card__actions--add-to-cart"
-        >
+      <span class="product-card__price">{{
+        formatPrice(
+          product.price - product.price * (product.discountPercentage / 100)
+        )
+      }}</span>
+      <div class="product-card__action-cont">
+        <button @click="addToCart(product)" class="btn btn--alt">
           Add to cart
         </button>
         <NuxtLink :to="`/products/${product.id}`">
-          <button class="product-card__actions--view-details">
-            View details
-          </button>
+          <button class="btn btn">View details</button>
         </NuxtLink>
       </div>
     </div>

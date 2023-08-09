@@ -1,0 +1,141 @@
+/* ./assets/css/main.css */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+  @apply rounded-xl border border-green-700 bg-green-600 p-4 py-2 font-medium text-green-200 shadow-inner shadow-green-400  active:shadow-green-700;
+
+  &--alt {
+    @apply rounded-xl border border-green-300 bg-green-200 p-5 py-2 font-extrabold text-green-600 shadow-inner shadow-green-50  active:shadow-green-300;
+  }
+}
+
+.site-header {
+  @apply sticky top-4 flex justify-between items-center bg-white border border-slate-200 p-4 max-w-6xl mx-4 xl:mx-auto rounded-2xl;
+}
+
+.site-logo > span {
+  @apply text-lg font-heading font-extrabold text-slate-900;
+}
+
+.site-nav {
+  &__list {
+    @apply flex gap-6;
+  }
+}
+
+.site-section {
+  @apply p-4 py-16 mx-auto max-w-7xl;
+}
+
+.site-section > h1 {
+  @apply text-4xl font-heading font-extrabold text-slate-900;
+}
+
+.action-cont {
+  @apply flex gap-2 mt-4;
+}
+
+.product-list {
+  @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+}
+
+.product-card {
+  @apply flex flex-col-reverse justify-end h-full rounded-xl border border-slate-200 overflow-hidden;
+
+  &__image > img {
+    @apply flex-shrink-0 w-full h-64 object-cover;
+  }
+
+  &__content {
+    @apply flex flex-col gap-2 p-4 h-full;
+  }
+
+  &__title {
+    @apply text-xl font-bold text-slate-900;
+  }
+
+  &__price {
+    @apply text-3xl font-bold text-green-600;
+  }
+
+  &__action-cont {
+    @apply flex gap-2 mt-auto;
+  }
+}
+
+.cart {
+  @apply flex flex-col gap-8;
+
+  &__total {
+    @apply text-3xl font-bold;
+  }
+}
+
+.cart-item {
+  @apply flex gap-2 items-center border border-slate-100 rounded-2xl overflow-clip;
+
+  &__image {
+    @apply flex-shrink-0 w-32 h-24 object-cover;
+  }
+
+  &__content {
+    @apply flex flex-col gap-1 p-4;
+  }
+
+  &__title {
+    @apply text-lg font-heading font-bold text-slate-900;
+  }
+
+  &__price {
+    @apply text-2xl font-bold text-green-600;
+  }
+
+  &__action-cont {
+    @apply ml-auto flex gap-2 px-6 items-center;
+  }
+
+  &__quantity {
+    @apply font-bold text-lg;
+  }
+}
+
+.product-header {
+  @apply flex flex-col-reverse lg:flex-row-reverse gap-8;
+
+  &__content {
+    @apply flex-1 flex flex-col gap-2;
+  }
+
+  &__title {
+    @apply text-4xl font-heading font-extrabold text-slate-900;
+  }
+
+  &__price {
+    @apply flex flex-col text-5xl font-bold text-green-600;
+
+    &--original {
+      @apply text-lg font-bold text-slate-600 line-through;
+    }
+  }
+}
+
+.product-info {
+  @apply flex flex-col gap-2;
+
+  &__item {
+    @apply flex gap-2 items-center;
+
+    &-title {
+      @apply text-lg font-bold text-slate-900;
+    }
+
+    &-value {
+      @apply text-slate-600;
+    }
+  }
+}

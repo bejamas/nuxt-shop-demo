@@ -24,7 +24,7 @@ useSeoMeta({
       guarantee!
     </p>
   </header>
-  <section class="site-seciton">
+  <section class="site-section">
     <ul class="product-list">
       <li
         v-for="product in products"
