@@ -7,11 +7,6 @@ useHead({
     return titleChunk ? `${titleChunk} - Nuxt Shop` : "Nuxt Shop";
   },
   meta: [
-    {
-      hid: "description",
-      name: "description",
-      content: description.value,
-    },
     //Open Graph
     {
       key: "og-type",
@@ -21,22 +16,7 @@ useHead({
     {
       key: "og-url",
       property: "og:url",
-      content: `https://thenuxtshop.netlify.app/`,
-    },
-    {
-      key: "og-title",
-      property: "og:title",
-      content: title.value,
-    },
-    {
-      key: "og-description",
-      property: "og:description",
-      content: description.value,
-    },
-    {
-      key: "og-image",
-      property: "og:image",
-      content: `https://thenuxtshop.netlify.app/assets/images/cover.jpg`,
+      content: `https://anuxtshop.netlify.app/`,
     },
     //Twitter
     {
@@ -47,24 +27,19 @@ useHead({
     {
       key: "twitter-url",
       property: "twitter:url",
-      content: `https://thenuxtshop.netlify.app/`,
-    },
-    {
-      key: "twitter-title",
-      property: "twitter:title",
-      content: title.value,
-    },
-    {
-      key: "twitter-description",
-      property: "twitter:description",
-      content: description.value,
-    },
-    {
-      key: "twitter-image",
-      property: "twitter:image",
-      content: `https://thenuxtshop.netlify.app/assets/images/cover.jpg`,
+      content: `https://anuxtshop.netlify.app/`,
     },
   ],
+});
+
+useSeoMeta({
+  description: description,
+  ogTitle: title,
+  ogDescription: description,
+  ogImage: `https://anuxtshop.netlify.app/assets/images/cover.jpg`,
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImage: `https://anuxtshop.netlify.app/assets/images/cover.jpg`,
 });
 </script>
 <template>
