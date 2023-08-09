@@ -11,6 +11,8 @@ console.log({
   id,
 });
 
+const { addToCart } = useCart();
+
 useSeoMeta({
   title: product.title,
   description: product.description,
@@ -42,7 +44,9 @@ useSeoMeta({
         </span>
       </div>
       <div class="action-cont">
-        <button class="btn btn--alt">Add to cart</button>
+        <button @click="addToCart(product)" class="btn btn--alt">
+          Add to cart
+        </button>
         <button class="btn">Buy now</button>
       </div>
     </div>
