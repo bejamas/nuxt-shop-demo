@@ -1,17 +1,18 @@
 <!-- ./pages/products/[id].vue -->
 <script setup lang="ts">
+import { useToast } from "vue-toastification";
 const route = useRoute();
+const toast = useToast();
+const { addToCart } = useCart();
 const id = route.params.id;
 
 const { data } = await useFetch(`https://dummyjson.com/products/${id}`);
 const product = data.value as Product;
 
-console.log({
-  product,
-  id,
-});
-
-const { addToCart } = useCart();
+const handleAddToCart = (product: Product) => {
+  addToCart(product);
+  toast.success(`${product.title} added to cart!`);
+};
 
 useSeoMeta({
   title: product.title,
@@ -44,7 +45,7 @@ useSeoMeta({
         </span>
       </div>
       <div class="action-cont">
-        <button @click="addToCart(product)" class="btn btn--alt">
+        <button @click="handleAddToCart(product)" class="btn btn--alt">
           Add to cart
         </button>
         <button class="btn">Buy now</button>
