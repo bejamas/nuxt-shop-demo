@@ -34,5 +34,10 @@ useSeoMeta({
         )
       }}
     </p>
+    <div class="action-cont">
+      <NuxtLink v-if="!(items.length === 0)" to="/checkout">
+        <button class="btn btn--primary">Proceed to checkout</button>
+      </NuxtLink>
+    </div>
   </section>
 </template>
