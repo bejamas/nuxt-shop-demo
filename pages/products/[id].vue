@@ -6,7 +6,7 @@ const toast = useToast();
 const { addToCart } = useCart();
 const id = route.params.id;
 
-const { data } = await useFetch(`https://dummyjson.com/products/${id}`);
+const { data } = await useFetch(`/api/getProduct?id=${id}`);
 const product = data.value as Product;
 
 const handleAddToCart = (product: Product) => {

@@ -6,11 +6,7 @@ interface ProductResponse {
   skip: number;
   limit: number;
 }
-const { products }: ProductResponse = await $fetch(
-  "https://dummyjson.com/products/"
-);
-
-const { addToCart } = useCart();
+const { products }: ProductResponse = await $fetch("/api/getProducts");
 
 useSeoMeta({
   title: "Products",

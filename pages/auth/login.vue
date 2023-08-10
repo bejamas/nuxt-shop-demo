@@ -8,19 +8,16 @@ const loginError = ref(null as string | null);
 
 const handleLogin = async () => {
   isLoading.value = true;
-  const { data, status, error } = await useFetch(
-    "https://dummyjson.com/auth/login",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: username.value,
-        password: password.value,
-      }),
+  const { data, status, error } = await useFetch("/api/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
     },
-  );
+    body: JSON.stringify({
+      username: username.value,
+      password: password.value,
+    }),
+  });
   isLoading.value = false;
   error.value && (loginError.value = error.value.data.message);
 
