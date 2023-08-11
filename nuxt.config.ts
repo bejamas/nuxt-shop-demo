@@ -1,3 +1,4 @@
+// ./nuxt.config.ts
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -7,8 +8,8 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css", "vue-toastification/dist/index.css"],
   build: { transpile: ["vue-toastification"] },
-  modules: ["@nuxtjs/tailwindcss", "@nuxt/content"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/content", "@nuxthq/studio"],
   content: {
     // https://content.nuxtjs.org/api/configuration
-  }
+  },
 });
