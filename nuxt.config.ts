@@ -6,5 +6,6 @@ export default defineNuxtConfig({
     "/checkout/**": { ssr: false },
   },
   css: ["~/assets/css/main.css", "vue-toastification/dist/index.css"],
+  build: { transpile: ["vue-toastification"] },
   modules: ["@nuxtjs/tailwindcss"],
 });

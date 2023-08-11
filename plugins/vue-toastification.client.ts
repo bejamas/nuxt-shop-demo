@@ -1,7 +1,8 @@
 // ./plugins/vue-toastification.client.ts
 
-import Toast from "vue-toastification";
+import Toast, { PluginOptions } from "vue-toastification";
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.use(Toast, {});
+  const options: PluginOptions = {};
+  nuxtApp.vueApp.use(Toast, options);
 });
