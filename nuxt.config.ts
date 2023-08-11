@@ -7,5 +7,8 @@ export default defineNuxtConfig({
   },
   css: ["~/assets/css/main.css", "vue-toastification/dist/index.css"],
   build: { transpile: ["vue-toastification"] },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/content"],
+  content: {
+    // https://content.nuxtjs.org/api/configuration
+  }
 });

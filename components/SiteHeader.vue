@@ -13,7 +13,7 @@ const { items } = useCart();
     <nav class="site-nav">
       <ul class="site-nav__list">
         <li class="site-nav__item">
-          <NuxtLink to="/">Home</NuxtLink>
+          <NuxtLink to="/blog">Blog</NuxtLink>
         </li>
         <li class="site-nav__item">
           <NuxtLink to="/products">Products</NuxtLink>
