@@ -15,11 +15,11 @@
 
 **Here are some additional tips that you may find helpful:**
 
-* Use high-quality images and videos of your products.
-* Offer free shipping or discounts for multiple items.
-* Create a blog to share tips and information about your products.
-* Run loyalty programs to reward repeat customers.
-* Partner with other businesses to cross-promote your products.
-* Attend industry events to network with other e-commerce professionals.
+- Use high-quality images and videos of your products.
+- Offer free shipping or discounts for multiple items.
+- Create a blog to share tips and information about your products.
+- Run loyalty programs to reward repeat customers.
+- Partner with other businesses to cross-promote your products.
+- Attend industry events to network with other e-commerce professionals.
 
 I hope these tips help you achieve success with your e-commerce business!

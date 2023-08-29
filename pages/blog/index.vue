@@ -20,7 +20,7 @@ useHead({
       <ContentList
         path="/blog"
         :query="{
-          only: ['title', 'description', '_path'],
+          only: ['title', 'description', '_path', 'readingTime'],
         }"
       >
         <!-- Default list slot -->
@@ -30,6 +30,9 @@ useHead({
               <header>
                 <h1 class="text-2xl font-semibold">{{ article.title }}</h1>
                 <p>{{ article.description }}</p>
+                <p class="text-sm text-gray-500">
+                  {{ article.readingTime?.text }}
+                </p>
                 <NuxtLink :to="article._path">
                   <button class="btn mt-2">Read more &rarr;</button>
                 </NuxtLink>
