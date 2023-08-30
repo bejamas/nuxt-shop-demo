@@ -17,5 +17,8 @@ export default defineNuxtConfig({
   content: {
     // https://content.nuxtjs.org/api/configuration
   },
-  extends: ["./base-layer"],
+  extends: [
+    // "../base-layer",
+    "@miracleio/my-nuxt-layer",
+  ],
 });
