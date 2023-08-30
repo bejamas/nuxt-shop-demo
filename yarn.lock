@@ -658,6 +658,11 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
+"@miracleio/my-nuxt-layer@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@miracleio/my-nuxt-layer/-/my-nuxt-layer-0.0.3.tgz#8704a58b63632b76a43b5d077d6024e08344f405"
+  integrity sha512-whjYGppWaBBPgZpnHqu36jJZSTUvrH17T0isAnitpSjAVw1ts7AJJcEAnkt194j8vVRShNyjAT+vQFkpp/VxGQ==
+
 "@netlify/functions@^1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@netlify/functions/-/functions-1.6.0.tgz#c373423e6fef0e6f7422ac0345e8bbf2cb692366"
